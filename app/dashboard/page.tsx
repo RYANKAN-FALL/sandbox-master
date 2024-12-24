@@ -361,7 +361,7 @@ export default function Page() {
               </Button>
               <Button disabled>
                 <Loader2 className="animate-spin" />
-                Please wait
+                Please waits
               </Button>
               <Button asChild>
                 <Link href="/login">Login</Link>
