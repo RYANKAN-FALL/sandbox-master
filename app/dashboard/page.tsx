@@ -127,6 +127,35 @@ import { DialogDemo } from "@/components/atom/DialogDemo";
 import { DrawerDemo } from "@/components/atom/DrawerDemo";
 import { DropdownMenuDemo } from "@/components/atom/DropdownMenuDemo";
 import { DatePickerDemo } from "@/components/atom/DatePickerDemo";
+import { Form } from "react-hook-form";
+import { InputForm } from "@/components/atom/Form";
+import { HoverCardDemo } from "@/components/atom/HoverCardDemo";
+import { InputDemo } from "@/components/atom/InputDemo";
+import { InputOTPDemo } from "@/components/atom/InputOTPDemo";
+import { LabelDemo } from "@/components/atom/LabelDemo";
+import { MenubarDemo } from "@/components/atom/MenubarDemo";
+import { NavigationMenuDemo } from "@/components/atom/NavigationMenuDemo";
+import { PaginationDemo } from "@/components/atom/PaginationDemo";
+import { PopoverDemo } from "@/components/atom/PopoverDemo";
+import { ProgressDemo } from "@/components/atom/ProgressDemo";
+import { RadioGroupDemo } from "@/components/atom/RadioGroupDemo";
+import { ResizableDemo } from "@/components/atom/ResizableDemo";
+import { ScrollAreaDemo } from "@/components/atom/ScrollAreaDemo";
+import { SelectDemo } from "@/components/atom/SelectDemo";
+import { SeparatorDemo } from "@/components/atom/SeparatorDemo";
+import { SheetDemo } from "@/components/atom/SheetDemo";
+import { Skeleton } from "@/components/ui/skeleton";
+import { SkeletonDemo } from "@/components/atom/SkeletonDemo";
+import { SliderDemo } from "@/components/atom/SliderDemo";
+import { SonnerDemo } from "@/components/atom/SonnerDemo";
+import { SwitchDemo } from "@/components/atom/SwitchDemo";
+import { TableDemo } from "@/components/atom/TableDemo";
+import { TabsDemo } from "@/components/atom/TabsDemo";
+import { TextareaDemo } from "@/components/atom/TextareaDemo";
+import { ToggleDemo } from "@/components/atom/ToggleDemo";
+import { ToggleGroup } from "@radix-ui/react-toggle-group";
+import { ToggleGroupDemo } from "@/components/atom/ToggleGroupDemo";
+import { TooltipDemo } from "@/components/atom/TooltipDemo";
 
 
 
@@ -144,7 +173,7 @@ export default function Page() {
               <Separator orientation="vertical" className="mr-2 h-4" />
               <h1 className="text-lg font-semibold">Style Guide</h1>
             </div>
-          </div>
+          </div>qwww  
         </header>
         <div className=" flex flex-1 flex-col gap-4 p-4 pt-0">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
@@ -476,6 +505,106 @@ export default function Page() {
             <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
               <h2 className="text-lg font-semibold">DropdownMenu</h2>
               <DropdownMenuDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">InputForm</h2>
+              <InputForm  />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">HoverCard</h2>
+              <HoverCardDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Input</h2>
+              <InputDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">InputOTP</h2>
+              <InputOTPDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Label</h2>
+              <LabelDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Menubar</h2>
+              <MenubarDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Pagination</h2>
+              <PaginationDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">PopOver</h2>
+              <PopoverDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Progress</h2>
+              <ProgressDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">RadioGroup</h2>
+              <RadioGroupDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Resizable</h2>
+              <ResizableDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">ScrollArea</h2>
+              <ScrollAreaDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Select</h2>
+              <SelectDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Separator</h2>
+              <SeparatorDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Sheet</h2>
+              <SheetDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Skeleton</h2>
+              <SkeletonDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Slider</h2>
+              <SliderDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Sonner</h2>
+              <SonnerDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Switch</h2>
+              <SwitchDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Table</h2>
+              <TableDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Tabs</h2>
+              <TabsDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">TextArea</h2>
+              <TextareaDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">Toggle</h2>
+              <ToggleDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">ToggleGroup</h2>
+              <ToggleGroupDemo />
+            </div>
+            <div className="flex flex-col gap-4 p-4 rounded-xl bg-white shadow-md">
+              <h2 className="text-lg font-semibold">ToolTip</h2>
+              <TooltipDemo />
             </div>
           </div>
         </div>
