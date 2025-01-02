@@ -20,7 +20,7 @@ export function ScrollAreaDemo() {
             <Separator className="my-2" />
           </>
         ))}
-      </div>
+      </div> 
     </ScrollArea>
   )
 }

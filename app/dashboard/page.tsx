@@ -120,7 +120,7 @@ import {
 import { ComboboxDemo } from "@/components/atom/ComboboxDemo";
 import { CommandDemo } from "@/components/atom/CommandDemo";
 import CompanyLogo from "@/components/atom/companyLogo";
-import { SidebarRight } from "@/components/sidebar-left";
+import RightSidebar from "@/components/right-sidebar";
 import { ContextMenuDemo } from "@/components/atom/ContextMenuDemo";
 import { DataTableDemo } from "@/components/atom/DataTableDemo";
 import { DialogDemo } from "@/components/atom/DialogDemo";
@@ -609,7 +609,7 @@ export default function Page() {
           </div>
         </div>
       </SidebarInset>
-      <SidebarRight side="right" />
+      <RightSidebar />
     </SidebarProvider>
   )
 }
