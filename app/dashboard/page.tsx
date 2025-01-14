@@ -19,7 +19,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-import { Calendar1, ChevronDown, ChevronsUpDown } from "lucide-react"
+import {  ChevronDown, ChevronsUpDown } from "lucide-react"
 
 import {
   Card,
@@ -29,8 +29,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { MagicCard } from "@/components/ui/magic-card"
-import BlurFade from "@/components/ui/blur-fade"
 import { Button } from "@/components/ui/button"
 import {
   Accordion,
@@ -90,72 +88,53 @@ import { Loader2 } from "lucide-react"
 
 import * as React from "react"
  
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
  
 
 
-import { Cat, Dog, Fish, Rabbit, Turtle } from "lucide-react";
-
-import { CarouselPlugin } from "@/components/atom/carouselPlugins"
-import { AreaChart } from "recharts"
-import { Component } from "@/components/ui/area-chart"
-import { MultiSelect } from "@/components/ui/multi-select"
-import { AreaCharts } from "@/components/atom/AreaChart";
-import { Checkbox } from "@radix-ui/react-checkbox";
-import { CheckboxDemo } from "@/components/atom/CheckboxDemo";
+import { CarouselPlugin } from "@/components/sandbox/carouselPlugins"
+import { AreaCharts } from "@/components/sandbox/AreaChart";
+import { CheckboxDemo } from "@/components/sandbox/CheckboxDemo";
 
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
-import { ComboboxDemo } from "@/components/atom/ComboboxDemo";
-import { CommandDemo } from "@/components/atom/CommandDemo";
-import CompanyLogo from "@/components/atom/companyLogo";
+import { ComboboxDemo } from "@/components/sandbox/ComboboxDemo";
+import { CommandDemo } from "@/components/sandbox/CommandDemo";
+import CompanyLogo from "@/components/sandbox/companyLogo";
 import RightSidebar from "@/components/right-sidebar";
-import { ContextMenuDemo } from "@/components/atom/ContextMenuDemo";
-import { DataTableDemo } from "@/components/atom/DataTableDemo";
-import { DialogDemo } from "@/components/atom/DialogDemo";
-import { DrawerDemo } from "@/components/atom/DrawerDemo";
-import { DropdownMenuDemo } from "@/components/atom/DropdownMenuDemo";
-import { DatePickerDemo } from "@/components/atom/DatePickerDemo";
-import { Form } from "react-hook-form";
-import { InputForm } from "@/components/atom/Form";
-import { HoverCardDemo } from "@/components/atom/HoverCardDemo";
-import { InputDemo } from "@/components/atom/InputDemo";
-import { InputOTPDemo } from "@/components/atom/InputOTPDemo";
-import { LabelDemo } from "@/components/atom/LabelDemo";
-import { MenubarDemo } from "@/components/atom/MenubarDemo";
-import { NavigationMenuDemo } from "@/components/atom/NavigationMenuDemo";
-import { PaginationDemo } from "@/components/atom/PaginationDemo";
-import { PopoverDemo } from "@/components/atom/PopoverDemo";
-import { ProgressDemo } from "@/components/atom/ProgressDemo";
-import { RadioGroupDemo } from "@/components/atom/RadioGroupDemo";
-import { ResizableDemo } from "@/components/atom/ResizableDemo";
-import { ScrollAreaDemo } from "@/components/atom/ScrollAreaDemo";
-import { SelectDemo } from "@/components/atom/SelectDemo";
-import { SeparatorDemo } from "@/components/atom/SeparatorDemo";
-import { SheetDemo } from "@/components/atom/SheetDemo";
-import { Skeleton } from "@/components/ui/skeleton";
-import { SkeletonDemo } from "@/components/atom/SkeletonDemo";
-import { SliderDemo } from "@/components/atom/SliderDemo";
-import { SonnerDemo } from "@/components/atom/SonnerDemo";
-import { SwitchDemo } from "@/components/atom/SwitchDemo";
-import { TableDemo } from "@/components/atom/TableDemo";
-import { TabsDemo } from "@/components/atom/TabsDemo";
-import { TextareaDemo } from "@/components/atom/TextareaDemo";
-import { ToggleDemo } from "@/components/atom/ToggleDemo";
-import { ToggleGroup } from "@radix-ui/react-toggle-group";
-import { ToggleGroupDemo } from "@/components/atom/ToggleGroupDemo";
-import { TooltipDemo } from "@/components/atom/TooltipDemo";
+import { ContextMenuDemo } from "@/components/sandbox/ContextMenuDemo";
+import { DataTableDemo } from "@/components/sandbox/DataTableDemo";
+import { DialogDemo } from "@/components/sandbox/DialogDemo";
+import { DrawerDemo } from "@/components/sandbox/DrawerDemo";
+import { DropdownMenuDemo } from "@/components/sandbox/DropdownMenuDemo";
+import { DatePickerDemo } from "@/components/sandbox/DatePickerDemo";
+import { InputForm } from "@/components/sandbox/Form";
+import { HoverCardDemo } from "@/components/sandbox/HoverCardDemo";
+import { InputDemo } from "@/components/sandbox/InputDemo";
+import { InputOTPDemo } from "@/components/sandbox/InputOTPDemo";
+import { LabelDemo } from "@/components/sandbox/LabelDemo";
+import { MenubarDemo } from "@/components/sandbox/MenubarDemo";
+import { PaginationDemo } from "@/components/sandbox/PaginationDemo";
+import { PopoverDemo } from "@/components/sandbox/PopoverDemo";
+import { ProgressDemo } from "@/components/sandbox/ProgressDemo";
+import { RadioGroupDemo } from "@/components/sandbox/RadioGroupDemo";
+import { ResizableDemo } from "@/components/sandbox/ResizableDemo";
+import { ScrollAreaDemo } from "@/components/sandbox/ScrollAreaDemo";
+import { SelectDemo } from "@/components/sandbox/SelectDemo";
+import { SeparatorDemo } from "@/components/sandbox/SeparatorDemo";
+import { SheetDemo } from "@/components/sandbox/SheetDemo";
+import { SkeletonDemo } from "@/components/sandbox/SkeletonDemo";
+import { SliderDemo } from "@/components/sandbox/SliderDemo";
+import { SonnerDemo } from "@/components/sandbox/SonnerDemo";
+import { SwitchDemo } from "@/components/sandbox/SwitchDemo";
+import { TableDemo } from "@/components/sandbox/TableDemo";
+import { TabsDemo } from "@/components/sandbox/TabsDemo";
+import { TextareaDemo } from "@/components/sandbox/TextareaDemo";
+import { ToggleDemo } from "@/components/sandbox/ToggleDemo";
+import { ToggleGroupDemo } from "@/components/sandbox/ToggleGroupDemo";
+import { TooltipDemo } from "@/components/sandbox/TooltipDemo";
 
 
 
@@ -173,7 +152,7 @@ export default function Page() {
               <Separator orientation="vertical" className="mr-2 h-4" />
               <h1 className="text-lg font-semibold">Style Guide</h1>
             </div>
-          </div>qwww  
+          </div> 
         </header>
         <div className=" flex flex-1 flex-col gap-4 p-4 pt-0">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
@@ -608,8 +587,8 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </SidebarInset>
       <RightSidebar />
+      </SidebarInset>
     </SidebarProvider>
   )
 }
