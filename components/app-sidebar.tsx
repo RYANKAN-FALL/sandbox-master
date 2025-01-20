@@ -1,187 +1,173 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import {
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  LifeBuoy,
+import { 
+  Search, 
+  ChevronRight, 
+  Pin,
+  FileText, 
   Map,
-  PieChart,
-  Send,
-  Settings2,
-  SquareTerminal,
-} from "lucide-react"
-
-import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
-import { NavSecondary } from "@/components/nav-secondary"
-import { NavUser } from "@/components/nav-user"
+  TrendingUpDownIcon,
+  HelpCircle,
+  Building2,
+  Focus,
+  Layers,
+  Warehouse,
+  UserPlus,
+  BellDot,
+  MonitorPlay,
+  ListOrdered,
+  Sparkles,
+  MessageCircleQuestion,
+} from 'lucide-react';
+import { Input } from "@/components/ui/input";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
+  SidebarGroup,
+  SidebarGroupContent,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarTrigger,
-} from "@/components/ui/sidebar"
+  SidebarMenuSub,
+  SidebarMenuSubItem,
+  SidebarMenuSubButton,
+} from "@/components/ui/sidebar";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import DevhausLogo from '@/src/assets/DevhausLogo';
+import { NavUser } from './nav-user';
+import AbbiyuImg from "@/src/assets/AbbiyuAvatarImage.png";
+import { SearchForm } from './search-form';
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: "Farilzi Abbiyu",
+    email: "abbiyu@devhaus.com.sg",
+    avatar: AbbiyuImg,
   },
-  navMain: [
-    {
-      title: "Playground",
-      url: "#",
-      icon: SquareTerminal,
-      isActive: true,
-      items: [
-        {
-          title: "History",
-          url: "#",
-        },
-        {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Models",
-      url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
-      ],
-    },
-  ],
-  navSecondary: [
-    {
-      title: "Support",
-      url: "#",
-      icon: LifeBuoy,
-    },
-    {
-      title: "Feedback",
-      url: "#",
-      icon: Send,
-    },
-  ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "Travel",
-      url: "#",
-      icon: Map,
-    },
-  ],
-}
+};
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+const mainNavItems = [
+  { icon: <Building2 strokeWidth={1.5} color="#030033" />, label: "Grand Stand" },
+  { icon: <Pin strokeWidth={1.5} color="#030033" className="-rotate-90" />, label: "Pinned", badge: "2" },
+  {
+    icon: <Focus strokeWidth={1.5} color="#030033" />,
+    label: "Deep work zone",
+    submenu: [
+      { label: "Courses", icon: <MonitorPlay strokeWidth={1.5} color="#030033" /> },
+      { label: "Guides", icon: <ListOrdered strokeWidth={1.5} color="#030033" /> },
+      { label: "Blueprint", icon: <Map strokeWidth={1.5} color="#030033" /> },
+    ],
+  },
+  { icon: <Layers strokeWidth={1.5} color="#030033" />, label: "Repository" },
+  { icon: <FileText strokeWidth={1.5} color="#030033" />, label: "Documents" },
+  {
+    icon: <MessageCircleQuestion strokeWidth={1.5} color="#030033" />,
+    label: "Ask Alfred",
+    submenu: [
+      { icon: <Sparkles strokeWidth={1.5} color="#030033" />, label: "Plan" },
+      { icon: <TrendingUpDownIcon strokeWidth={1.5} color="#030033" />, label: "Forecast", active: true },
+    ],
+  },
+  { icon: <Warehouse strokeWidth={1.5} color="#030033" />, label: "Leader's Hangar" },
+];
+
+export function AppSidebar() {
   return (
-    <Sidebar variant="inset" collapsible="icon" {...props}>
+    <Sidebar variant='inset' collapsible="icon">
       <SidebarHeader>
-        <SidebarTrigger/> 
-        <SidebarMenu>
-          <SidebarMenuItem className="flex items-center bg0re">
-            <SidebarMenuButton  size="lg" asChild>
-              <a href="#">
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <Command className="size-4" />
-                </div>
-                <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-semibold">Acme Inc</span>
-                  <span className="truncate text-xs">Enterprise</span>
-                </div>
-              </a>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
+        <div className="">
+          <div className="text-xl font-semibold mb-4 flex items-center gap-2">
+            <DevhausLogo width={120} />
+          </div>
+        </div>
       </SidebarHeader>
-      <SidebarContent >
-        <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+
+      <SearchForm/>
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {mainNavItems.map((item) => (
+                <SidebarMenuItem key={item.label}>
+                  {item.submenu ? (
+                    <Collapsible className="group">
+                      <CollapsibleTrigger asChild>
+                        <SidebarMenuButton className="w-full gap-3 justify-between">
+                          <div className="flex items-center gap-3">
+                            <span className="text-lg">{item.icon}</span>
+                            <span className="text-[#030033]">{item.label}</span>
+                          </div>
+                          <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]:rotate-90" />
+                        </SidebarMenuButton>
+                      </CollapsibleTrigger>
+                      <CollapsibleContent>
+                        <SidebarMenuSub>
+                          {item.submenu.map((subItem) => (
+                            <SidebarMenuSubItem key={subItem.label}>
+                              <SidebarMenuSubButton>
+                                <span className="text-lg mr-2">
+                                  {subItem.icon}
+                                </span>
+                                {subItem.label}
+                              </SidebarMenuSubButton>
+                            </SidebarMenuSubItem>
+                          ))}
+                        </SidebarMenuSub>
+                      </CollapsibleContent>
+                    </Collapsible>
+                  ) : (
+                    <SidebarMenuButton className="gap-3">
+                      <span className="text-lg">{item.icon}</span>
+                      <span className="text-[#030033]">{item.label}</span>
+                      {item.badge && (
+                        <span className="ml-auto text-white px-2 py-0.5 rounded-md text-xs bg-[#0038FF]">
+                          {item.badge}
+                        </span>
+                      )}
+                    </SidebarMenuButton>
+                  )}
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton className="gap-3">
+                  <span className="text-lg"><HelpCircle strokeWidth={1.5} color="#030033" /></span>
+                  <span>Support</span>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton className="gap-3">
+                  <span className="text-lg"><UserPlus strokeWidth={1.5} color="#030033" /></span>
+                  <span>Invite your team</span>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton className="gap-3">
+                  <span className="text-lg"><BellDot strokeWidth={1.5} color="#030033" /></span>
+                  <span>Notification</span>
+                  <span className="ml-auto text-white px-2 py-0.5 rounded-md text-xs bg-[#0038FF]">
+                          3
+                        </span>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
       </SidebarContent>
+
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <SidebarFooter>
+          <NavUser user={data.user} />
+        </SidebarFooter>
       </SidebarFooter>
     </Sidebar>
-  )
+  );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 
+import SeoCalculator from "@/components/SEOCalculator/SEOCalculator";
 import { AppSidebar } from "@/components/app-sidebar"
 import SEOCalculator from "@/components/calculator/calculator";
 import { SliderDemo } from "@/components/sandbox/SliderDemo";
@@ -32,7 +33,7 @@ export default function Page() {
         </header>
         <div className=" flex flex-1 flex-col gap-4 p-4 pt-0">
           <div className="">
-            <SEOCalculator />
+            <SeoCalculator />
           </div>
         </div>
       </SidebarInset>
